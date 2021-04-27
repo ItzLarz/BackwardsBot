@@ -1,14 +1,11 @@
 # Import Library to Twitter API
 import tweepy
 
+# Import Twitter API Tokens from secret.py
+from secret import *
+
 # Change which user you want to bombard with replies (without @)
 UserToTrack = "MeItzLarz"
-
-# Twitter API Tokens
-consumer_key = "CONSUMER_KEY"
-consumer_secret = "CONSUMER_SECRET"
-acces_key = "ACCES_KEY"
-acces_secret = "ACCES_SECRET"
 
 # Connecting to Twitter API
 auth = tweepy.OAuthHandler(consumer_key, consumer_secret)
