@@ -9,6 +9,7 @@ Necessities:
 * IDLE will do, but why would you? Just use Visual Studio Code
 * Don't be an idiot and know a bit of Python
 
+
 * Twitter Account
 * Developer Priviliges for your Twitter Account
 * Consumer Key and Consumer Secret Key (Also known as API Key and API Secret Key)
