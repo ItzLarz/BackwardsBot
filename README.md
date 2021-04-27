@@ -11,4 +11,4 @@ Necessities:
 
 * Twitter Account
 * Developer Priviliges for your Twitter Account
-* 
+* Consumer Key and Consumer Secret Key (Also known as API Key and API Secret Key)
