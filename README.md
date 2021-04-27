@@ -8,3 +8,7 @@ Necessities:
 * Tweepy (Install by using "pip install tweepy" in Powershell)
 * IDLE will do, but why would you? Just use Visual Studio Code
 * Don't be an idiot and know a bit of Python
+
+* Twitter Account
+* Developer Priviliges for your Twitter Account
+* 
