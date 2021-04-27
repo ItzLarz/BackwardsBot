@@ -5,10 +5,10 @@ import tweepy
 UserToTrack = "MeItzLarz"
 
 # Twitter API Tokens
-consumer_key = "4n7VRE7pILncLYpkfzUZURjKN"
-consumer_secret = "CbQUXAoILvbpca1OlU78NwRulKGlprwbz8Tx2hnP9Dni8IBlAA"
-acces_key = "3892213744-VJoGYO1fSwM3rL96RqQaVkyAOVkvKSh1n98K22X"
-acces_secret = "ZAYBYxD8rbCRSehjHu79uNKImc2CEbWiWdOL57OKaBDDf"
+consumer_key = "CONSUMER_KEY"
+consumer_secret = "CONSUMER_SECRET"
+acces_key = "ACCES_KEY"
+acces_secret = "ACCES_SECRET"
 
 # Connecting to Twitter API
 auth = tweepy.OAuthHandler(consumer_key, consumer_secret)
