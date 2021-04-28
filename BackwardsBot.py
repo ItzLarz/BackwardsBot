@@ -23,7 +23,7 @@ class UserTracker(tweepy.StreamListener):
     # Tweet met the criteria
     def on_status(self, tweet):
         print("Tweet found")
-        
+
         # Checking if Tweet is a reply
         if tweet.in_reply_to_status_id == None:
             tweet_handler(tweet)
@@ -75,3 +75,4 @@ twitterStream = tweepy.Stream(api.auth, UserTracker(api))
 # Waiting for Tweet meeting the criteria
 user = api.get_user(UserToTrack)
 twitterStream.filter(follow=[str(user.id)])
+

@@ -1,6 +1,9 @@
 # Secret API-Token file
 secret.py
 
+# Visual Studio Code directory
+.vscode
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
