@@ -5,11 +5,11 @@ import tweepy
 from secret import *
 
 # Change which user you want to bombard with replies (without @)
-UserToTrack = "MeItzLarz"
+UserToTrack = "_Backwards_Bot_"
 
 # Connecting to Twitter API
 auth = tweepy.OAuthHandler(consumer_key, consumer_secret)
-auth.set_access_token(acces_key, acces_secret)
+auth.set_access_token(access_key, access_secret)
 api = tweepy.API(auth, wait_on_rate_limit=True, wait_on_rate_limit_notify=True)
 
 
@@ -58,13 +58,19 @@ def tweet_handler(tweet):
     # Shuffle the letters and put back spaces and newlines
     for i in range(len(tweetList)):
         for j in range(len(tweetList[i])):
-            for k in range(len(tweetList[i][j])):
-                backwardsTweet += tweetList[i][j][-1 - k]
+            if "http" in tweetList[i][j] or "#" in tweetList[i][j] or "@" in tweetList[i][j]:
+                for k in range(len(tweetList[i][j])):
+                    backwardsTweet += tweetList[i][j][k]
+
+            else:
+                for k in range(len(tweetList[i][j])):
+                    backwardsTweet += tweetList[i][j][-1 - k]
+
             backwardsTweet += " "
         backwardsTweet += "\n"
 
     # Reply with Backwards Tweet
-    api.update_status(backwardsTweet, tweet.id)
+    api.update_status(backwardsTweet, in_reply_to_status_id=tweet.id, auto_populate_reply_metadata=True)
     print("Reply Sent")
     print("\n")
 
@@ -75,4 +81,3 @@ twitterStream = tweepy.Stream(api.auth, UserTracker(api))
 # Waiting for Tweet meeting the criteria
 user = api.get_user(UserToTrack)
 twitterStream.filter(follow=[str(user.id)])
-
