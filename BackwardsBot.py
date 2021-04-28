@@ -58,6 +58,7 @@ def tweet_handler(tweet):
     # Shuffle the letters and put back spaces and newlines
     for i in range(len(tweetList)):
         for j in range(len(tweetList[i])):
+            # Check if word contains a #, mention or URL
             if "http" in tweetList[i][j] or "#" in tweetList[i][j] or "@" in tweetList[i][j]:
                 for k in range(len(tweetList[i][j])):
                     backwardsTweet += tweetList[i][j][k]
@@ -70,7 +71,8 @@ def tweet_handler(tweet):
         backwardsTweet += "\n"
 
     # Reply with Backwards Tweet
-    api.update_status(backwardsTweet, in_reply_to_status_id=tweet.id, auto_populate_reply_metadata=True)
+    api.update_status(backwardsTweet, in_reply_to_status_id=tweet.id,
+                      auto_populate_reply_metadata=True)
     print("Reply Sent")
     print("\n")
 
