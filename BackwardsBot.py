@@ -5,12 +5,12 @@ import tweepy
 from secret import *
 
 # Change which user you want to bombard with replies (without @)
-UserToTrack = "_Backwards_Bot_"
+UserToTrack = "pewdiepie"
 
 # Connecting to Twitter API
 auth = tweepy.OAuthHandler(consumer_key, consumer_secret)
-auth.set_access_token(access_key, access_secret)
 api = tweepy.API(auth, wait_on_rate_limit=True, wait_on_rate_limit_notify=True)
+auth.set_access_token(access_key, access_secret)
 
 
 # Twitter Stream Class
